@@ -7,15 +7,17 @@ import DistanceOption from "./Pages/DistanceOption/DistanceOption";
 import RulletPage from "./Pages/RulletPage/RulletPage";
 import FirstLoad from "./FirstLoad";
 import Profile from "./Components/Profile";
+import Upside from "./Components/Upside";
 
 function App() {
   return (
     <div>
       <BrowserRouter>
         <Routes>
+          <Route path="/top" element={<Upside />} />
           <Route path="/" element={<FirstLoad />} />
           <Route path="/profile" element={<Profile />} />
-          {/* <Route path="/home" element={<HomePage />} /> */}
+          {/* <Route path="/Home" element={<HomePage />} /> */}
           <Route path="/ask" element={<AskOptionPage />} />
           <Route path="/answer1" element={<DistanceOption />} />
           <Route path="/answer2" element={<CategoryOption />} />
