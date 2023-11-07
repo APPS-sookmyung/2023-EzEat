@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"; // 추가해야 함
+import { Link } from "react-router-dom";
 import * as S from "./Footer.style";
 
 function Footer() {

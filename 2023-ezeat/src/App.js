@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import HomePage from "./Pages/HomePage/HomePage";
+// import HomePage from "./Pages/HomePage/HomePage";
 import AskOptionPage from "./Pages/AskOptionPage/AskOptionPage";
 import CategoryOption from "./Pages/CatagoryOption/CategoryOption";
 import DistanceOption from "./Pages/DistanceOption/DistanceOption";
@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<FirstLoad />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/home" element={<HomePage />} />
+          {/* <Route path="/home" element={<HomePage />} /> */}
           <Route path="/ask" element={<AskOptionPage />} />
           <Route path="/answer1" element={<DistanceOption />} />
           <Route path="/answer2" element={<CategoryOption />} />

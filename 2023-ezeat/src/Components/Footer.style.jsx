@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from "styled-components";
 
 export const Footer = styled.div`
   margin-bottom: 0px;
