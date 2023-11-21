@@ -10,6 +10,8 @@ import Profile from "./Components/Profile";
 import UpSide from "./Components/UpSide";
 import DownSide from "./Components/DownSide";
 import ShopList from "./Pages/ShopListPage/ShopList";
+import TypeList from "./Pages/TypeShopListPage/TypeList";
+import MenuPage from "./Pages/MenuDetailPage/MenuPage";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
           <Route path="/ask" element={<AskOptionPage />} />
           <Route path="/answer1" element={<DistanceOption />} />
           <Route path="/shops" element={<ShopList />} />
+          <Route path="/foodtypeshop" element={<TypeList />} />
+          <Route path="/menupage" element={<MenuPage />} />
           {/* 여기까지는 개발완료 */}
           <Route path="/answer2" element={<CategoryOption />} />
           <Route path="/rullet" element={<RulletPage />} />
