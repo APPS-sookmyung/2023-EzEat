@@ -9,6 +9,7 @@ import FirstLoad from "./FirstLoad";
 import Profile from "./Components/Profile";
 import UpSide from "./Components/UpSide";
 import DownSide from "./Components/DownSide";
+import ShopList from "./Pages/ShopListPage/ShopList";
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
           <Route path="/Home" element={<HomePage />} />
           <Route path="/ask" element={<AskOptionPage />} />
           <Route path="/answer1" element={<DistanceOption />} />
-          {/* 여기까지는 개발완료 ,, detailPage 는 또 새로 파서 라우팅 작업 해줘야함*/}
+          <Route path="/shops" element={<ShopList />} />
+          {/* 여기까지는 개발완료 */}
           <Route path="/answer2" element={<CategoryOption />} />
           <Route path="/rullet" element={<RulletPage />} />
           <Route path="/profile" element={<Profile />} />
