@@ -4,7 +4,7 @@ import HomePage from "./Pages/HomePage/HomePage";
 import AskOptionPage from "./Pages/AskOptionPage/AskOptionPage";
 import CategoryOption from "./Pages/CatagoryOption/CategoryOption";
 import DistanceOption from "./Pages/DistanceOption/DistanceOption";
-import RulletPage from "./Pages/RulletPage/RulletPage";
+import RoulettePage from "./Pages/RulletPage/RoulettePage";
 import FirstLoad from "./FirstLoad";
 import Profile from "./Components/Profile";
 import UpSide from "./Components/UpSide";
@@ -12,6 +12,7 @@ import DownSide from "./Components/DownSide";
 import ShopList from "./Pages/ShopListPage/ShopList";
 import TypeList from "./Pages/TypeShopListPage/TypeList";
 import MenuPage from "./Pages/MenuDetailPage/MenuPage";
+import GamePage from "./Pages/RulletPage/GamePage";
 
 function App() {
   return (
@@ -27,9 +28,10 @@ function App() {
           <Route path="/shops" element={<ShopList />} />
           <Route path="/foodtypeshop" element={<TypeList />} />
           <Route path="/menupage" element={<MenuPage />} />
+          <Route path="/roullet" element={<RoulettePage />} />
+          <Route path="/game" element={<GamePage />} />
           {/* 여기까지는 개발완료 */}
           <Route path="/answer2" element={<CategoryOption />} />
-          <Route path="/rullet" element={<RulletPage />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
       </BrowserRouter>
