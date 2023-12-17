@@ -1,9 +1,14 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import UpSide from "../../Components/UpSide";
 import DownSide from "../../Components/DownSide";
 import * as S from "./HomePage.style";
 
 function HomePage() {
+  const location = useLocation();
+  const MenuPick = location.state ? location.state.MenuPick : null;
+  const GameResult = location.state ? location.state.GameResult : null;
+
   return (
     <S.Container>
       <div style={{ width: "100%" }}>
@@ -33,12 +38,9 @@ function HomePage() {
           <S.MenuList>
             <S.MenuBox>
               <S.MenuImg></S.MenuImg>
-              <S.MenuName>감자튀김</S.MenuName>
-            </S.MenuBox>
-
-            <S.MenuBox>
-              <S.MenuImg></S.MenuImg>
-              <S.MenuName>쌀국수</S.MenuName>
+              <S.MenuName>
+                {MenuPick} {GameResult}{" "}
+              </S.MenuName>
             </S.MenuBox>
           </S.MenuList>
         </S.AteList>

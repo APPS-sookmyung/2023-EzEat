@@ -1,17 +1,24 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Wheel } from "react-custom-roulette";
 import * as S from "./RoulettePage.style";
 
-const initialData = [{ option: "치킨" }, { option: "피자" }, { option: "꽝" }];
+const initialData = [{ option: "음식점 A" }];
 
 const truncateText = (text, maxLength) => {
   return text.length > maxLength ? text.substring(0, maxLength) + "..." : text;
 };
 
 const RoulettePage = () => {
+  const navigate = useNavigate();
   const [mustSpin, setMustSpin] = useState(false);
   const [prizeNumber, setPrizeNumber] = useState("");
   const [data, setData] = useState(initialData);
+
+  const goHomeClick = () => {
+    const GameResult = data[prizeNumber].option;
+    navigate(`/home`, { state: { GameResult } });
+  };
 
   const handleSpinClick = () => {
     if (!mustSpin) {
@@ -56,10 +63,25 @@ const RoulettePage = () => {
           {prizeNumber !== "" ? data[prizeNumber].option : ""}
         </S.MenuContent>
       </S.MenuBox>
-      <S.RotateBtn onClick={handleSpinClick}>
-        <S.Img src="/images/reload.svg" />
-        <S.Content>{!mustSpin ? "돌리기" : "돌리는중..."}</S.Content>
-      </S.RotateBtn>
+
+      <S.Decisions>
+        <S.DecideBtn onClick={handleSpinClick}>
+          <S.Img src="/images/reload.svg" />
+          <S.Content
+            style={{ marginTop: "10px", fontSize: "20px", fontWeight: 700 }}
+          >
+            {!mustSpin ? "돌리기" : "돌리는중.."}
+          </S.Content>
+        </S.DecideBtn>
+
+        <S.DecideBtn onClick={goHomeClick}>
+          <S.Img src="/images/reload.svg" />
+          <S.Content>
+            메뉴 <br />
+            확정하기
+          </S.Content>
+        </S.DecideBtn>
+      </S.Decisions>
     </S.Container>
   );
 };

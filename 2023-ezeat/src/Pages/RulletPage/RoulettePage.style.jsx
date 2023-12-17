@@ -47,6 +47,13 @@ export const MenuContent = styled.div`
   text-align: center; /* 가운데 정렬 */
 `;
 
+export const Decisions = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+`;
+
 export const Img = styled.img`
   width: 20px;
   margin-left: 16px;
@@ -54,19 +61,19 @@ export const Img = styled.img`
 `;
 
 export const Content = styled.div`
-  margin-left: 14px;
+  margin-left: 10px;
   margin-top: 6px;
-  font-size: large;
   font-weight: 600;
+  text-align: center;
 `;
 
-export const RotateBtn = styled.div`
+export const DecideBtn = styled.div`
   margin-top: 10%;
   border-radius: 15px;
   border: 2px solid #4c3d1c;
   background: rgba(247, 191, 34, 0.81);
   width: 140px;
-  height: 36px;
+  height: 50px;
   display: flex;
   flex-direction: row;
 `;
