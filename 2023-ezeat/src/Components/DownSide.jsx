@@ -1,18 +1,44 @@
-import * as S from "./DownSide.style";
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import * as S from "./DownSide.style";
 
 function Downside() {
+  const navigate = useNavigate();
+
+  function HomeChange() {
+    navigate("/home");
+  }
+
+  function SearchChange() {
+    navigate("/ask");
+  }
+  function GameChange() {
+    navigate("/game");
+  }
+
   return (
     <S.Screen>
       <S.Under>
         <S.Options>
-          <S.Icons src="/images/home.png" alt="Home Icon" />
+          <S.Icons
+            src="/images/home.png"
+            alt="Home Icon"
+            onClick={HomeChange}
+          />
         </S.Options>
         <S.Options>
-          <S.Icons src="/images/finding.svg" alt="Finding Icon" />
+          <S.Icons
+            src="/images/finding.svg"
+            alt="Finding Icon"
+            onClick={SearchChange}
+          />
         </S.Options>
         <S.Options>
-          <S.Icons src="/images/randomgame.svg" alt="Random Game Icon" />
+          <S.Icons
+            src="/images/randomgame.svg"
+            alt="Random Game Icon"
+            onClick={GameChange}
+          />
         </S.Options>
         <S.Options>
           <S.Icons src="/images/setmenu.svg" alt="Set Menu Icon" />

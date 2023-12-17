@@ -1,6 +1,13 @@
 import * as S from "./MenuPage.style";
+import { useNavigate } from "react-router-dom";
 
 function MenuPage() {
+  const navigate = useNavigate();
+
+  function GoBackHandle() {
+    navigate(`/shops`);
+  }
+
   return (
     <S.Container>
       <S.Title>
@@ -12,7 +19,7 @@ function MenuPage() {
 
       <S.List>
         <S.MenuBox>
-          <S.MenuImg src="/images/vietnoodle.jpg" />
+          <S.MenuImg onClick={GoBackHandle} src="/images/vietnoodle.jpg" />
           <S.MenuDetail>
             <S.MenuName>김치 나베 우동</S.MenuName>
             <S.MenuExplain>메뉴 설명</S.MenuExplain>

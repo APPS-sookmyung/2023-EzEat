@@ -22,7 +22,7 @@ function App() {
           <Route path="/top" element={<UpSide />} />
           <Route path="/bottom" element={<DownSide />} />
           <Route path="/" element={<FirstLoad />} />
-          <Route path="/Home" element={<HomePage />} />
+          <Route path="/home" element={<HomePage />} />
           <Route path="/ask" element={<AskOptionPage />} />
           <Route path="/answer1" element={<DistanceOption />} />
           <Route path="/shops" element={<ShopList />} />
