@@ -42,12 +42,20 @@ export const ShopDetail = styled.div`
   background: #fff7d9;
   box-shadow: -3px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
+
+  ${({ clicked }) =>
+    clicked
+      ? `
+  transition: 0.3s;
+    filter: brightness(0.7);
+  `
+      : ""}
 `;
 
 export const Header = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
 
 export const Distance = styled.div`
@@ -178,4 +186,60 @@ export const Rullet = styled.div`
 export const RulletText = styled.div`
   margin-top: 16px;
   margin-left: 18px;
+`;
+
+export const MenuContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 100%;
+  overflow: scroll;
+  margin-top: 60px;
+`;
+
+export const Menus = styled.div`
+  width: 100px; /* Adjust the width as needed */
+  height: 60px; /* Adjust the height as needed */
+  border: 2px solid red;
+  margin: 10px; /* Add margin for spacing */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 10px;
+`;
+
+export const CloseButton = styled.div`
+  color: white;
+  position: fixed;
+  right: 60px;
+  background-color: black;
+`;
+
+export const ModalTitle = styled.div`
+  color: black;
+  position: fixed;
+`;
+
+export const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent gray background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const ModalContent = styled.div`
+  height: 50%;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  margin-left: 40px;
+  margin-right: 40px;
+  align-items: center;
 `;

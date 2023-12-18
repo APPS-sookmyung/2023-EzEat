@@ -20,8 +20,9 @@ export const Title = styled.div`
 
 export const TimeContainer = styled.div`
   display: flex;
-  flex-wrap: wrap; /* 추가: 자식 요소가 공간을 벗어나면 새로운 줄에 배치 */
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 20px;
 `;
 
 export const TimeBox = styled.div`
@@ -32,26 +33,27 @@ export const TimeBox = styled.div`
 `;
 
 export const SingleBox = styled.div`
-  width: 50px;
-  height: 50px;
-  border-radius: 10px;
-  border: 1.5px solid #000;
-  background: #fff7d9;
+  width: 55px;
+  height: 55px;
   box-shadow: -2px 4px 5px 0px rgba(0, 0, 0, 0.25);
   margin-left: 17px;
   margin-bottom: 30px;
   padding: -10px;
+  border-radius: 20px;
+  background: rgba(255, 247, 217, 0.75);
 `;
 
 export const ImgBox = styled.img`
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
+  margin-top: 12px;
 `;
 
 export const DetailName = styled.div`
   color: black;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 14px;
+  font-weight: 700;
 `;
 
 export const NextPage = styled.img`
