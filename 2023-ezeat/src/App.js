@@ -26,11 +26,10 @@ function App() {
           <Route path="/ask" element={<AskOptionPage />} />
           <Route path="/answer1" element={<DistanceOption />} />
           <Route path="/shops" element={<ShopList />} />
-          <Route path="/foodtypeshop" element={<TypeList />} />
+          <Route path="/foodtype" element={<TypeList />} />
           <Route path="/menupage" element={<MenuPage />} />
           <Route path="/roullet" element={<RoulettePage />} />
           <Route path="/game" element={<GamePage />} />
-          {/* 여기까지는 개발완료 */}
           <Route path="/answer2" element={<CategoryOption />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
