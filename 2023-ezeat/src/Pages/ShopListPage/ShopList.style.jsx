@@ -24,6 +24,7 @@ export const List = styled.div`
   max-height: 100vh;
   width: 76%;
   height: 100%;
+  margin-bottom: 50px;
 `;
 
 export const ShopContainer = styled.div`
@@ -69,7 +70,7 @@ export const Distance = styled.div`
 
 export const FoodType = styled.div`
   // border: 1px solid blue;
-  width: 24%;
+  width: 30%;
   height: 20px;
   margin-right: 5px;
   font-weight: 600;
@@ -96,7 +97,6 @@ export const LabelColor = styled.div`
 export const ContentTitle = styled.div`
   margin-top: 2%;
   color: black;
-  font-size: small;
   font-weight: 700;
   margin-left: 3%;
 `;
@@ -121,14 +121,12 @@ export const RateNum = styled.div`
 
 export const Bottom = styled.div`
   margin-right: 5px;
-  // background-color: pink;
   margin-top: 3%;
   height: 34%;
 `;
 
 export const DetailBtn = styled.div`
   margin-left: 44%;
-
   display: flex;
   flex-direction: row;
 `;
@@ -193,21 +191,23 @@ export const MenuContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  height: 100%;
-  overflow: scroll;
+  max-height: 100vh;
+  height: 80%;
+  margin-bottom: 50px;
+  overflow-y: scroll;
   margin-top: 60px;
 `;
 
 export const Menus = styled.div`
-  width: 100px; /* Adjust the width as needed */
+  width: 110px; /* Adjust the width as needed */
   height: 60px; /* Adjust the height as needed */
-  border: 2px solid red;
   margin: 10px; /* Add margin for spacing */
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 15px;
+  background: rgba(255, 238, 177, 0.75);
 `;
 
 export const CloseButton = styled.div`

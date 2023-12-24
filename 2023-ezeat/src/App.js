@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import GlobalStyle from "./GlobalStyles";
 import HomePage from "./Pages/HomePage/HomePage";
 import AskOptionPage from "./Pages/AskOptionPage/AskOptionPage";
 import CategoryOption from "./Pages/CatagoryOption/CategoryOption";
@@ -17,6 +18,7 @@ import GamePage from "./Pages/RulletPage/GamePage";
 function App() {
   return (
     <div>
+      <GlobalStyle />
       <BrowserRouter>
         <Routes>
           <Route path="/top" element={<UpSide />} />

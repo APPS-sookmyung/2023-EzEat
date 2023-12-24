@@ -40,16 +40,15 @@ width: 96%;
 }
 `;
 
-export const Banner = styled.div`
-  border: 1px solid blue;
-  height: 20%;
+export const Banner = styled.img`
+  height: 25%;
   width: 90%;
   border-radius: 14px;
 `;
 
 export const AteList = styled.div`
   margin-top: 8%;
-  width: 100%;
+  width: 104%;
   height: 96%;
   border-radius: 30px;
   background: linear-gradient(
@@ -69,15 +68,15 @@ export const Title = styled.div`
 `;
 
 export const TitleImg = styled.img`
-  margin-left: 4%;
-  margin-top: 30%;
+  margin-left: 12.8%;
+  margin-top: 24%;
 `;
 
 export const ContentTitleBar = styled.div`
   display: flex;
   background: white;
   width: 190px;
-  margin-left: 8%;
+  margin-left: 4%;
   height: 27px;
 `;
 
@@ -109,6 +108,7 @@ export const MenuImg = styled.div`
   border: 4px solid white;
   height: 80%;
   border-radius: 16%;
+  width: 80%;
 `;
 
 export const MenuName = styled.div`

@@ -20,12 +20,11 @@ function HomePage() {
       </S.SearchBar>
 
       <S.AppContent>
-        <S.Banner> 이번주 타임세일 </S.Banner>
-
+        <S.Banner src="/images/banners.jpg" alt="banner" />
         <S.AteList>
           <S.Title>
             {" "}
-            근처 맛집, <br />
+            <span style={{ fontWeight: "800" }}>근처 맛집, </span> <br />
             이제 쉽게 <br /> 찾아보자!{" "}
           </S.Title>
           <S.TitleImg src="/images/navi-icon.svg"></S.TitleImg>

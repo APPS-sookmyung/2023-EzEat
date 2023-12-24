@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import * as S from "./DownSide.style";
 
-function Downside() {
+function DownSide() {
   const navigate = useNavigate();
 
   function HomeChange() {
@@ -41,11 +41,11 @@ function Downside() {
           />
         </S.Options>
         <S.Options>
-          <S.Icons src="/images/setmenu.svg" alt="Set Menu Icon" />
+          <S.Icons src="/images/isuser.png" alt="Set User Icon" />
         </S.Options>
       </S.Under>
     </S.Screen>
   );
 }
 
-export default Downside;
+export default DownSide;

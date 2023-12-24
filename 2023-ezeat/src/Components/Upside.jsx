@@ -7,9 +7,7 @@ function UpSide() {
     <S.Screen>
       <S.Container>
         <S.Logo src="/images/toplogo.svg"></S.Logo>
-        <Link to="/profile">
-          <S.Profile src="/images/user.png"></S.Profile>
-        </Link>
+        <Link to="/profile"></Link>
       </S.Container>
     </S.Screen>
   );

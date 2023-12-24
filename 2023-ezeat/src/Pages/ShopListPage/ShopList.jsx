@@ -11,12 +11,82 @@ function ShopList() {
   const [selectedShop, setSelectedShop] = useState(null);
   const [selectedMenu, setSelectedMenu] = useState(null);
 
-  const restaurantName = "음식점A";
+  const restaurantName = [
+    "달볶이",
+    "버스컵",
+    "루다브레드",
+    "가문의우동",
+    "포라임",
+    "맘스터치",
+    "포36거리",
+    "탕화쿵푸",
+    "사이공마켓",
+    "정",
+    "마포구이마당",
+    "신마라명가",
+    "네코노스시",
+  ];
 
   const menuList = [
-    { id: 1, name: "불고기" },
-    { id: 2, name: "치킨" },
-    { id: 3, name: "양념치킨" },
+    { id: 1, name: "소고기쌀국수" },
+    { id: 2, name: "로스가스" },
+    { id: 3, name: "히레가스" },
+    { id: 4, name: "포돈정식" },
+    { id: 5, name: "감자말이 새우롤 4pcs" },
+    { id: 6, name: "필리소스 닭어깨튀김 4pcs" },
+    { id: 7, name: "새우춘권 4pcs" },
+    { id: 8, name: "어린이 소고기 쌀국수" },
+    { id: 9, name: "어린이 미니 히레가스" },
+  ];
+
+  const restaurantType = [
+    "분식집",
+    "분식집",
+    "베이커리",
+    "일식집",
+    "베트남 음식점",
+    "패스트푸드점",
+    "베트남 음식점",
+    "중식집",
+    "베트남음식점",
+    "중식집",
+    "육류점",
+    "중식집",
+    "일식집",
+  ];
+
+  const distance = [
+    "213",
+    "219",
+    "222",
+    "250",
+    "235",
+    "250",
+    "259",
+    "263",
+    "272",
+    "275",
+    "365",
+    "367",
+    "367",
+    "370",
+  ];
+
+  const rating = [
+    "4.5",
+    "4.8",
+    "4.6",
+    "4.7",
+    "4.7",
+    "4.8",
+    "4.6",
+    "4.8",
+    "4.6",
+    "4.7",
+    "4.7",
+    "4.8",
+    "4.5",
+    "4.7",
   ];
 
   function HandleDetail() {
@@ -27,11 +97,11 @@ function ShopList() {
     navigate(`/game`);
   }
 
-  const handleShopClick = (contentTitle) => {
-    if (selectedShop === contentTitle) {
+  const handleShopClick = (index) => {
+    if (selectedShop === index) {
       setSelectedShop(null);
     } else {
-      setSelectedShop(contentTitle);
+      setSelectedShop(index);
     }
   };
 
@@ -60,35 +130,40 @@ function ShopList() {
       </S.Title>
 
       <S.List>
-        <S.ShopContainer>
-          <S.ShopDetail
-            onClick={() => handleShopClick(restaurantName)}
-            clicked={selectedShop === restaurantName}
-          >
-            <S.Header>
-              <S.Distance>300m</S.Distance>
-              <S.FoodType>일식</S.FoodType>
-            </S.Header>
+        {restaurantName.map((name, index) => (
+          <S.ShopContainer key={index}>
+            <S.ShopDetail
+              onClick={() => handleShopClick(index)}
+              clicked={selectedShop === index}
+            >
+              <S.Header>
+                <S.Distance>{distance[index]}m</S.Distance>
+                <S.FoodType>{restaurantType[index]}</S.FoodType>
+              </S.Header>
 
-            <S.Body>
-              <S.ContentTitleBar>
-                <S.LabelColor></S.LabelColor>
-                <S.ContentTitle>{restaurantName}</S.ContentTitle>
-              </S.ContentTitleBar>
-              <S.Rating>
-                <S.RateImg src="/images/rate.svg" />
-                <S.RateNum>4.8</S.RateNum>
-              </S.Rating>
-            </S.Body>
+              <S.Body>
+                <S.ContentTitleBar>
+                  <S.LabelColor></S.LabelColor>
+                  <S.ContentTitle>{name}</S.ContentTitle>
+                </S.ContentTitleBar>
+                <S.Rating>
+                  <S.RateImg src="/images/rate.svg" />
+                  <S.RateNum>{rating[index]}</S.RateNum>
+                </S.Rating>
+              </S.Body>
 
-            <S.Bottom>음식점에 대한 설명</S.Bottom>
-          </S.ShopDetail>
+              <S.Bottom>
+                <span>{name}</span>
+                <span>{restaurantType[index]}</span>
+              </S.Bottom>
+            </S.ShopDetail>
 
-          <S.DetailBtn>
-            <S.NextImg src="/images/detail.svg" />
-            <S.BtnName onClick={HandleDetail}>메뉴 상세 정보 보기</S.BtnName>
-          </S.DetailBtn>
-        </S.ShopContainer>
+            <S.DetailBtn>
+              <S.NextImg src="/images/detail.svg" />
+              <S.BtnName onClick={HandleDetail}>메뉴 상세 정보 보기</S.BtnName>
+            </S.DetailBtn>
+          </S.ShopContainer>
+        ))}
 
         <S.OptionBtn>
           <S.MenuFix onClick={MenuModal}>
@@ -106,7 +181,7 @@ function ShopList() {
           <S.ModalContent>
             <S.ModalTitle>
               {" "}
-              {selectedShop}에서 <br />
+              {restaurantName[selectedShop]}에서 <br />
               먹을 수 있는 음식들이에요.
             </S.ModalTitle>
             <S.CloseButton onClick={handleCloseModal}>X</S.CloseButton>

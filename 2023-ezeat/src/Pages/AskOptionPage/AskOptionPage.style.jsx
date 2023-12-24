@@ -46,7 +46,6 @@ export const OptionCaption = styled.div`
   font-weight: 600;
   width: 100%;
   margin-top: 12%;
-  font-size: small;
   text-align: center;
   margin-left: 10%;
 `;
