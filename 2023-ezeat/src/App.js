@@ -8,7 +8,7 @@ import DistanceOption from "./Pages/DistanceOption/DistanceOption";
 import RoulettePage from "./Pages/RulletPage/RoulettePage";
 import FirstLoad from "./FirstLoad";
 import Profile from "./Components/Profile";
-import UpSide from "./Components/UpSide";
+import UpSideMenu from "./Components/UpSideMenu";
 import DownSide from "./Components/DownSide";
 import ShopList from "./Pages/ShopListPage/ShopList";
 import TypeList from "./Pages/TypeShopListPage/TypeList";
@@ -21,7 +21,7 @@ function App() {
       <GlobalStyle />
       <BrowserRouter>
         <Routes>
-          <Route path="/top" element={<UpSide />} />
+          <Route path="/top" element={<UpSideMenu />} />
           <Route path="/bottom" element={<DownSide />} />
           <Route path="/" element={<FirstLoad />} />
           <Route path="/home" element={<HomePage />} />

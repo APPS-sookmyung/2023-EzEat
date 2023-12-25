@@ -1,5 +1,5 @@
 import React from "react";
-import UpSide from "../../Components/UpSide";
+import UpSideMenu from "../../Components/UpSideMenu";
 import DownSide from "../../Components/DownSide";
 import RoulettePage from "./RoulettePage";
 import * as S from "./GamePage.style";
@@ -8,7 +8,7 @@ function GamePage() {
   return (
     <S.Container>
       <div style={{ width: "100%" }}>
-        <UpSide />
+        <UpSideMenu />
       </div>
       <div style={{ width: "100%" }}>
         <RoulettePage />

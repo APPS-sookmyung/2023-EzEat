@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import UpSide from "../../Components/UpSide";
+import UpSideMenu from "../../Components/UpSideMenu";
 import DownSide from "../../Components/DownSide";
 import * as S from "./HomePage.style";
 
@@ -12,7 +12,7 @@ function HomePage() {
   return (
     <S.Container>
       <div style={{ width: "100%" }}>
-        <UpSide />
+        <UpSideMenu />
       </div>
       <S.SearchBar>
         <S.SearchBox></S.SearchBox>
