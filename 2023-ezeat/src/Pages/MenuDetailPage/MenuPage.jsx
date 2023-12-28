@@ -19,11 +19,47 @@ function MenuPage() {
 
       <S.List>
         <S.MenuBox>
-          <S.MenuImg onClick={GoBackHandle} src="/images/vietnoodle.jpg" />
           <S.MenuDetail>
-            <S.MenuName>김치 나베 우동</S.MenuName>
-            <S.MenuExplain>메뉴 설명</S.MenuExplain>
+            <S.MenuName onClick={GoBackHandle}>소고기 쌀국수</S.MenuName>
+            <S.MenuPrice>8,000원</S.MenuPrice>
+          </S.MenuDetail>
+        </S.MenuBox>
+
+        <S.MenuBox>
+          <S.MenuDetail>
+            <S.MenuName>로스가스</S.MenuName>
+            <S.MenuPrice>8,000원</S.MenuPrice>
+          </S.MenuDetail>
+        </S.MenuBox>
+
+        <S.MenuBox>
+          <S.MenuDetail>
+            <S.MenuName>히레가스</S.MenuName>
+            <S.MenuPrice>9,000원</S.MenuPrice>
+          </S.MenuDetail>
+        </S.MenuBox>
+
+        <S.MenuBox>
+          <S.MenuDetail>
+            <S.MenuName>포돈정식</S.MenuName>
             <S.MenuPrice>9,500원</S.MenuPrice>
+          </S.MenuDetail>
+        </S.MenuBox>
+
+        <S.MenuBox>
+          <S.MenuDetail>
+            <S.MenuName>새우춘권</S.MenuName>
+            <S.MenuPrice>5,000원</S.MenuPrice>
+          </S.MenuDetail>
+        </S.MenuBox>
+
+        <S.MenuBox>
+          <S.MenuDetail>
+            <S.MenuName>
+              감자말이 <br />
+              새우롤
+            </S.MenuName>
+            <S.MenuPrice>5,500원</S.MenuPrice>
           </S.MenuDetail>
         </S.MenuBox>
       </S.List>

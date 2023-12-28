@@ -13,7 +13,7 @@ export const Container = styled.div`
 `;
 
 export const Logo = styled.img`
-  width: 54%;
-  margin-left: 24%;
-  margin-top: 6%;
+  width: 130px;
+  margin-left: 34%;
+  margin-top: 12%;
 `;

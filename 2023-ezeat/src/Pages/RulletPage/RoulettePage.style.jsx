@@ -58,6 +58,8 @@ export const Img = styled.img`
   width: 20px;
   margin-left: 16px;
   margin-bottom: 2px;
+  height: 20px;
+  margin-top: 14px;
 `;
 
 export const Content = styled.div`
@@ -76,4 +78,75 @@ export const DecideBtn = styled.div`
   height: 50px;
   display: flex;
   flex-direction: row;
+`;
+
+export const Modal = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+`;
+
+export const ModalContent = styled.div`
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+`;
+
+export const ModalHeader = styled.div`
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const ModalTitle = styled.h2`
+  margin: 0;
+`;
+
+export const CloseButton = styled.button`
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #666;
+`;
+
+export const ModalBody = styled.div`
+  padding: 16px;
+`;
+
+export const Label = styled.label`
+  display: block;
+  margin-bottom: 8px;
+`;
+
+export const Input = styled.input`
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+`;
+
+export const ModalFooter = styled.div`
+  padding: 16px;
+  text-align: right;
+`;
+
+export const Button = styled.button`
+  background: #3498db;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
 `;

@@ -19,10 +19,14 @@ export const SearchBar = styled.div`
   margin-left: 10%;
 `;
 
-export const SearchBox = styled.div`
-  width: 86%;
+export const SearchBox = styled.input`
+  width: 70%;
   background-color: #e7e7e7;
   border-radius: 18px;
+  margin-left: 38px;
+  color: white;
+  border: none;
+  padding-left: 5px;
 `;
 
 export const SearchIcon = styled.img`
@@ -68,20 +72,22 @@ export const Title = styled.div`
 `;
 
 export const TitleImg = styled.img`
-  margin-left: 12.8%;
-  margin-top: 24%;
+  width: 140px;
+  margin-top: 60px;
+  margin-left: 50px;
 `;
 
 export const ContentTitleBar = styled.div`
   display: flex;
-  background: white;
-  width: 190px;
   margin-left: 4%;
   height: 27px;
+  flex-direction: row;
+  width: 100%;
 `;
 
 export const LabelColor = styled.div`
   width: 8px;
+  height: 20px;
   background-color: #ffd357;
 `;
 
@@ -90,27 +96,44 @@ export const ContentTitle = styled.div`
   color: black;
   font-size: small;
   font-weight: 700;
-  margin-left: 3%;
+  width: 160px;
+  background: white;
+  padding-left: 5px;
+  height: 20px;
+  padding-top: 6px;
 `;
 export const MenuList = styled.div`
   display: flex;
   height: 30%;
+  flex-direction: row;
+  width: 95%;
+  overflow-y: scroll;
+  max-height: 100vh;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-left: 18px;
+  flex-wrap: wrap;
 `;
 
 export const MenuBox = styled.div`
   padding: 4%;
   display: flex;
-  flex-direction: column;
-  width: 30%;
+  flex-direction: row;
+  width: 80px;
+  background: white;
+  justify-content: space-between;
+  height: 15px;
+  margin-left: 10px;
+  margin-top: 12px;
+  border-radius: 10px;
 `;
 
-export const MenuImg = styled.div`
-  border: 4px solid white;
-  height: 80%;
-  border-radius: 16%;
-  width: 80%;
+export const MenuImg = styled.img`
+  height: 24px;
 `;
 
 export const MenuName = styled.div`
   margin: 0 auto;
+  color: black;
+  font-weight: 700;
 `;
